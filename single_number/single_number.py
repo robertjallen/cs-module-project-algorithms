@@ -3,9 +3,19 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    # Create an empty list to store unique elements
+    dupeList = []
+    
+    # Iterate over the original list and for each element
+    # add it to dupeList, if its not already there.
+    for i in arr:
+        if i in dupeList:
+            dupeList.remove(i)
 
-    pass
+        else:
+            dupeList.append(i)
+    # Return the list of unique elements        
+    return dupeList[0]
 
 
 if __name__ == '__main__':
